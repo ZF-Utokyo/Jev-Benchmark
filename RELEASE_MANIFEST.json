@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "scope": "formal_test_core_release",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 406,
+      "sha256": "4889885f3f0e2638db625c3a3ff92ff9aca3414810f9bb98e142514263a62fb9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4117,
+      "sha256": "ad69991e0f18ee290e93b3a9aeda87174bfb50464507dfce0ee50382495cecfe"
+    },
+    {
+      "path": "analysis/__init__.py",
+      "bytes": 56,
+      "sha256": "37827cdb1b1f6e4ee7c9a783a0799d6beba1ea0fa81d467f4280eff623d04491"
+    },
+    {
+      "path": "analysis/figures.py",
+      "bytes": 14478,
+      "sha256": "3161116464f0c2b92e5fa8c8b21483e75a76786b5b5f079e3288ae75f473cb49"
+    },
+    {
+      "path": "analysis/reproduce.py",
+      "bytes": 6115,
+      "sha256": "bbb854cb928e5cb7da1b1c8d3c339473c6224589dba7527026932b3ffaa54c94"
+    },
+    {
+      "path": "benchmark/__init__.py",
+      "bytes": 56,
+      "sha256": "37827cdb1b1f6e4ee7c9a783a0799d6beba1ea0fa81d467f4280eff623d04491"
+    },
+    {
+      "path": "benchmark/data.py",
+      "bytes": 8668,
+      "sha256": "9310911cb29a4adf5dce55d4b8413add4a8be9e7ae4e54dacbeae58b37dbd979"
+    },
+    {
+      "path": "benchmark/metrics.py",
+      "bytes": 21465,
+      "sha256": "a5f582f816255bc79471526662fc3c5acd103035571da3709096e7ef5105e0e7"
+    },
+    {
+      "path": "benchmark/protocol.py",
+      "bytes": 6661,
+      "sha256": "0a8dc47f87f459657cf6b5fdfef5a4818f791cf9706064ee509bb71f7d415e16"
+    },
+    {
+      "path": "benchmark/providers.py",
+      "bytes": 19795,
+      "sha256": "594cb5de0a1de45372ee905124ccfc929da0a9114168fb2b88cc0e3cd405d458"
+    },
+    {
+      "path": "benchmark/resources.py",
+      "bytes": 2796,
+      "sha256": "b0a38c3bf8c4c059c570c21908a02d65d20e07b34911e09913e8e50adf8da690"
+    },
+    {
+      "path": "benchmark/run.py",
+      "bytes": 9398,
+      "sha256": "6455d43cf6ad773ae5302193b32812212a706b70c5d388c37e12559802c3e090"
+    },
+    {
+      "path": "configs/models.json",
+      "bytes": 5117,
+      "sha256": "b5f52e35865abd9be549cc9546376d610376269325a60cce28cca2433bfc6e2a"
+    },
+    {
+      "path": "configs/pricing.json",
+      "bytes": 1893,
+      "sha256": "e30ff3d3bee5399e2c164c3bc18866f42239a244ce2a965130b1a967caa17550"
+    },
+    {
+      "path": "data/expected_metrics.json",
+      "bytes": 323331,
+      "sha256": "4af294fcbda5685976e59773552ae9a7e100f6898169b4d7e139054c0001523c"
+    },
+    {
+      "path": "data/predictions.jsonl",
+      "bytes": 3388924,
+      "sha256": "4768b852a5243f776c74dee5707198ad62ad24cff0048e420b287565170f43fb"
+    },
+    {
+      "path": "data/provenance.json",
+      "bytes": 8435,
+      "sha256": "417c8c39bc7deb27f4cb6dc28def00c8cd8ae9c30834840be0ef535e6429462f"
+    },
+    {
+      "path": "data/splits.json",
+      "bytes": 2318,
+      "sha256": "8485a9e42ef0bd4302db7043b7387863187d80322ca710b73379a463d727a224"
+    },
+    {
+      "path": "docs/protocol.md",
+      "bytes": 8522,
+      "sha256": "4c57ed3840cbbf801efd700192b0e2b71d0115588140e7fa86ae2cd5880e6587"
+    },
+    {
+      "path": "docs/release_scope.md",
+      "bytes": 3364,
+      "sha256": "76245a5a1d997675375101797c3575833dfb71f664785e58146676aec57616e8"
+    },
+    {
+      "path": "docs/rerunning.md",
+      "bytes": 8701,
+      "sha256": "d19f98f87df145a058777904f14661bfe87ba8680f7e4c7df7c2c3a45a023b03"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 402,
+      "sha256": "a8de0ad854c0a3ca3721a5619ac61bd54a1ecbbd7f776ca201a309f1dedf2643"
+    },
+    {
+      "path": "tests/test_data.py",
+      "bytes": 4699,
+      "sha256": "d7f5fa36f1b04b254c8b8db1ab40547116d3ac47df085bc6a202b64ffcfa8f08"
+    },
+    {
+      "path": "tests/test_metrics.py",
+      "bytes": 5712,
+      "sha256": "14fa05ea7dc086a144f1109b2e4148be1eecf1a5749dbf94f1339b799a09db60"
+    },
+    {
+      "path": "tests/test_protocol.py",
+      "bytes": 10364,
+      "sha256": "80c1a58518bb3807d1fd6142246859192ad74066b6f5dbf98761e1e9268500a7"
+    },
+    {
+      "path": "tests/test_resources.py",
+      "bytes": 1220,
+      "sha256": "59bf2ac5fa0b83f20fd973f0c37b0da551f10934352608140b36c37e4cd6aefb"
+    }
+  ]
+}

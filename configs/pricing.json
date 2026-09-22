@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "scope": "Historical rates used for the frozen September 2026 evaluation; not a current price quotation.",
+  "unit": "USD per million tokens unless otherwise indicated",
+  "models": {
+    "jev": {"basis": "listed_rate_estimate", "input": 0.042, "output": 0},
+    "gemini-flash-lite": {"basis": "listed_rate_estimate", "input": 0.30, "output": 2.50, "cached_input": 0.03},
+    "gemini-pro": {"basis": "listed_rate_estimate", "input": 2.0, "output": 12.0, "cached_input": 0.20, "long_context_threshold": 200000, "long_context_input": 4.0, "long_context_output": 18.0, "long_context_cached_input": 0.40},
+    "luna": {"basis": "provider_reported"},
+    "astra": {"basis": "provider_reported"},
+    "terra": {"basis": "listed_rate_estimate", "input": 2.0, "output": 12.0, "cached_input": 0.20},
+    "claude-sonnet5": {"basis": "listed_rate_estimate", "input": 2.0, "output": 10.0, "cached_input": 0.20, "cache_creation_5m": 2.50, "cache_creation_1h": 4.0},
+    "claude-haiku45": {"basis": "listed_rate_estimate", "input": 1.0, "output": 5.0, "cached_input": 0.10, "cache_creation_5m": 1.25, "cache_creation_1h": 2.0},
+    "qwen4b": {"basis": "rental_equivalent", "usd_per_gpu_hour": 2.0, "gpus": 1},
+    "qwen9b": {"basis": "rental_equivalent", "usd_per_gpu_hour": 2.0, "gpus": 1}
+  },
+  "notes": [
+    "Gemini completion tokens include reported thinking tokens.",
+    "Anthropic input tokens exclude cache reads and writes; those are added separately.",
+    "For Gemini and OpenAI-compatible token accounting, cached inputs are a subset of input tokens.",
+    "Missing usage or reported cost remains unknown, not zero.",
+    "GPU cost is an active-request rental equivalent including failed attempts; model loading, idle allocation and other hosting costs are excluded.",
+    "API token-rate costs and GPU rental equivalents are not provider billing statements."
+  ]
+}

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jev-benchmark"
+version = "0.1.0"
+description = "Reproducible ContractNLI evaluation of Jev and language models"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["matplotlib>=3.9"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["analysis*", "benchmark*"]
+namespaces = true

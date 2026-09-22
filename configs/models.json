@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "scope": "formal_test",
+  "models": {
+    "jev": {
+      "display_name": "Jev 1.13.0",
+      "developer": "Typesafe",
+      "adapter": "jev",
+      "requested_model": "jev-1.13.0",
+      "historical_access": "direct_api",
+      "generation": {},
+      "concurrency_per_model": 1,
+      "retries": 0
+    },
+    "gemini-flash-lite": {
+      "display_name": "Gemini 3.5 Flash-Lite",
+      "developer": "Google",
+      "adapter": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "historical_access": "direct_api",
+      "generation": {
+        "candidateCount": 1,
+        "maxOutputTokens": 16384,
+        "thinkingConfig": {
+          "thinkingLevel": "minimal",
+          "includeThoughts": false
+        }
+      },
+      "concurrency_per_model": 1,
+      "retries": 0
+    },
+    "luna": {
+      "display_name": "GPT-5.6 Luna",
+      "developer": "OpenAI",
+      "adapter": "openrouter",
+      "requested_model": "openai/gpt-5.6-luna",
+      "historical_access": "openrouter",
+      "generation": {
+        "reasoning": {
+          "effort": "none"
+        },
+        "max_completion_tokens": 8192
+      },
+      "concurrency_per_model": 1,
+      "retries": 0
+    },
+    "gemini-pro": {
+      "display_name": "Gemini 3.1 Pro Preview",
+      "developer": "Google",
+      "adapter": "gemini",
+      "requested_model": "gemini-3.1-pro-preview",
+      "historical_access": "direct_api",
+      "generation": {
+        "candidateCount": 1,
+        "temperature": 1.0,
+        "maxOutputTokens": 16384,
+        "thinkingConfig": {
+          "thinkingLevel": "low",
+          "includeThoughts": false
+        }
+      },
+      "concurrency_per_model": 1,
+      "retries": 0
+    },
+    "astra": {
+      "display_name": "GPT-6 Astra",
+      "developer": "OpenAI",
+      "adapter": "openrouter",
+      "requested_model": "openai/gpt-6-astra",
+      "historical_access": "openrouter",
+      "generation": {
+        "reasoning": {
+          "effort": "high"
+        },
+        "max_completion_tokens": 16384
+      },
+      "concurrency_per_model": 1,
+      "retries": 0
+    },
+    "qwen4b": {
+      "display_name": "Qwen3.5-4B",
+      "developer": "Alibaba",
+      "adapter": "qwen",
+      "requested_model": "Qwen/Qwen3.5-4B",
+      "historical_access": "local_gpu",
+      "generation": {
+        "enable_thinking": true,
+        "thinking_mode": "natural_common",
+        "thinking_token_budget": null,
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": -1,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "repetition_penalty": 1.0,
+        "min_tokens": 0,
+        "ignore_eos": false,
+        "max_tokens": 32768,
+        "reasoning_parser": "qwen3",
+        "request_seed": null,
+        "serving_backend": "vllm",
+        "output_constraint": "structured_outputs.json"
+      },
+      "concurrency_per_model": 1,
+      "retries": 0
+    },
+    "qwen9b": {
+      "display_name": "Qwen3.5-9B",
+      "developer": "Alibaba",
+      "adapter": "qwen",
+      "requested_model": "Qwen/Qwen3.5-9B",
+      "historical_access": "local_gpu",
+      "generation": {
+        "enable_thinking": true,
+        "thinking_mode": "natural_common",
+        "thinking_token_budget": null,
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": -1,
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "repetition_penalty": 1.0,
+        "min_tokens": 0,
+        "ignore_eos": false,
+        "max_tokens": 32768,
+        "reasoning_parser": "qwen3",
+        "request_seed": null,
+        "serving_backend": "vllm",
+        "output_constraint": "structured_outputs.json"
+      },
+      "concurrency_per_model": 1,
+      "retries": 0
+    },
+    "claude-sonnet5": {
+      "display_name": "Claude Sonnet 5",
+      "developer": "Anthropic",
+      "adapter": "anthropic",
+      "requested_model": "claude-sonnet-5",
+      "historical_access": "third_party_gateway",
+      "generation": {
+        "thinking": {
+          "type": "adaptive"
+        },
+        "output_config": {
+          "effort": "medium"
+        },
+        "max_tokens": 16384
+      },
+      "concurrency_per_model": 1,
+      "retries": 0
+    },
+    "terra": {
+      "display_name": "GPT-5.6 Terra",
+      "developer": "OpenAI",
+      "adapter": "openai",
+      "requested_model": "gpt-5.6-terra",
+      "historical_access": "third_party_gateway",
+      "generation": {
+        "reasoning_effort": "medium",
+        "max_completion_tokens": 16384,
+        "service_tier": "default",
+        "stream": false
+      },
+      "concurrency_per_model": 1,
+      "retries": 0
+    },
+    "claude-haiku45": {
+      "display_name": "Claude Haiku 4.5",
+      "developer": "Anthropic",
+      "adapter": "anthropic",
+      "requested_model": "claude-haiku-4-5-20251001",
+      "historical_access": "third_party_gateway",
+      "generation": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "output_config": {},
+        "max_tokens": 8192
+      },
+      "concurrency_per_model": 1,
+      "retries": 0
+    }
+  }
+}

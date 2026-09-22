@@ -1,0 +1,34 @@
+# Python and local tooling
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+build/
+dist/
+.DS_Store
+
+# Credentials and machine-local settings
+.env
+.env.*
+.secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+endpoints.json
+
+# Generated reports and new evaluation outputs
+results/
+runs/
+data/test123/
+data/test_anchor30/
+data/dev30/
+data/dev_anchor10/
+*.log
+tmp/

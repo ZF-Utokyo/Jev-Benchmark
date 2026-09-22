@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "scope": "formal_test_only",
+  "models": 10,
+  "attempts": 4830,
+  "invalid_attempts": 13,
+  "description": "Field-allowlisted export of frozen predictions. Source payloads, responses, errors, environments, endpoints and identities are excluded.",
+  "predictions_sha256": "4768b852a5243f776c74dee5707198ad62ad24cff0048e420b287565170f43fb",
+  "sources": [
+    {
+      "model_id": "jev",
+      "stage": "baseline",
+      "attempts": 123,
+      "source_sha256": {
+        "run.json": "6f82778143a39736f7f63ac98230148bdfe1866a234b2447376511368c078075",
+        "requests.jsonl": "3d55646e6e63466da0631785d3dbcf87739a06c76d17a4cdb8d08fb840368eb9",
+        "input_data.jsonl": "a2e7dbff61687dea33ee4361874e259cc666de5048fad137ef63aa521af28021"
+      }
+    },
+    {
+      "model_id": "jev",
+      "stage": "anchor",
+      "attempts": 360,
+      "source_sha256": {
+        "run.json": "123ead4082778c738736c92fe3e89567e24826567d7f7941542f2414e842921e",
+        "requests.jsonl": "7d11972149e11d74e25be5e462f4f08cafce959336bfc773c6d59be22da29385",
+        "input_data.jsonl": "3ead4848c6e8d931bfe95f684ada82f58b65e0bd8a41c9d63199bd5f0c0ae0e0"
+      }
+    },
+    {
+      "model_id": "gemini-flash-lite",
+      "stage": "baseline",
+      "attempts": 123,
+      "source_sha256": {
+        "run.json": "34446082652e616e07c3b0c9398625778e94333423ff90c10bb737ca3a74e187",
+        "requests.jsonl": "0ba50f426d523e9e2ae6588f3afe6385fc5fe6a3091788f1128545731605e2e4",
+        "input_data.jsonl": "a2e7dbff61687dea33ee4361874e259cc666de5048fad137ef63aa521af28021"
+      }
+    },
+    {
+      "model_id": "gemini-flash-lite",
+      "stage": "anchor",
+      "attempts": 360,
+      "source_sha256": {
+        "run.json": "3003608dd727faa8d36d1312c2e99cddd22c71d66518229d08c1b64862b29471",
+        "requests.jsonl": "b3b1e04a6aa5121c915fe1c04f5a89a1b03bee7b715a8442699ad025e9220a9a",
+        "input_data.jsonl": "3ead4848c6e8d931bfe95f684ada82f58b65e0bd8a41c9d63199bd5f0c0ae0e0"
+      }
+    },
+    {
+      "model_id": "luna",
+      "stage": "baseline",
+      "attempts": 123,
+      "source_sha256": {
+        "run.json": "9559d3596ba0da1b15d8a09ca61880510c3ab56253a6308f9b60da9b2892f95e",
+        "requests.jsonl": "713e8f3e4acd3db1f58ffcd7084845492a38c7c6685a9bf88516a53f25ee97f9",
+        "input_data.jsonl": "a2e7dbff61687dea33ee4361874e259cc666de5048fad137ef63aa521af28021"
+      }
+    },
+    {
+      "model_id": "luna",
+      "stage": "anchor",
+      "attempts": 360,
+      "source_sha256": {
+        "run.json": "92ebe3ca29ce8fdb5a1d0b293a0c3688489fcce32fe659e33803f2f66201a1d7",
+        "requests.jsonl": "19a6197c2c668a9f97857c56bc041dd01faea29a0c236756c4493ef0c79eadb0",
+        "input_data.jsonl": "3ead4848c6e8d931bfe95f684ada82f58b65e0bd8a41c9d63199bd5f0c0ae0e0"
+      }
+    },
+    {
+      "model_id": "gemini-pro",
+      "stage": "baseline",
+      "attempts": 123,
+      "source_sha256": {
+        "run.json": "8e1a6991f8f222032a5c41155a009fe05b99e693984604da0a8477b855c47f06",
+        "requests.jsonl": "206f378ecf04711d988f9751e7df3cd4cf98c8b297bf93f05647760ca26c96e9",
+        "input_data.jsonl": "a2e7dbff61687dea33ee4361874e259cc666de5048fad137ef63aa521af28021"
+      }
+    },
+    {
+      "model_id": "gemini-pro",
+      "stage": "anchor",
+      "attempts": 360,
+      "source_sha256": {
+        "run.json": "1077779f1c86fd7b222e71cd4bbc48d0a91c54376fa47d21537aaf38b28f9ea8",
+        "requests.jsonl": "85d41e7a62eff6d85e209fdcc9a5423cc710fb142c8801563cb4e2f240f4edb6",
+        "input_data.jsonl": "3ead4848c6e8d931bfe95f684ada82f58b65e0bd8a41c9d63199bd5f0c0ae0e0"
+      }
+    },
+    {
+      "model_id": "astra",
+      "stage": "baseline",
+      "attempts": 123,
+      "source_sha256": {
+        "run.json": "2b527000fa77998bb91a392d04304130507dede4c66ab2cab4fb4aa8900f0fab",
+        "requests.jsonl": "b758cf9a44a94d4e77d73103524689659c09ebf8026e2c49a827e77ff9846260",
+        "input_data.jsonl": "a2e7dbff61687dea33ee4361874e259cc666de5048fad137ef63aa521af28021"
+      }
+    },
+    {
+      "model_id": "astra",
+      "stage": "anchor",
+      "attempts": 360,
+      "source_sha256": {
+        "run.json": "8ae4e089c1aaae64645cd559666fa69110404bec4c0419ed918f9d47fbbaf7f9",
+        "requests.jsonl": "5a415f5a59539ef935e742bcc3436d51ef2a5c625d234a9787c5ffb990cde251",
+        "input_data.jsonl": "3ead4848c6e8d931bfe95f684ada82f58b65e0bd8a41c9d63199bd5f0c0ae0e0"
+      }
+    },
+    {
+      "model_id": "qwen4b",
+      "stage": "baseline",
+      "attempts": 123,
+      "source_sha256": {
+        "run.json": "eff95a7792ce910b4dd0facf9958592f6d4d2c0a2173d16691e91c3b0c95facf",
+        "requests.jsonl": "488402dbb81782783f1afd083553f38d4d517d8f0a5f2b14642120df896e9dfc",
+        "input_data.jsonl": "a2e7dbff61687dea33ee4361874e259cc666de5048fad137ef63aa521af28021"
+      }
+    },
+    {
+      "model_id": "qwen4b",
+      "stage": "anchor",
+      "attempts": 360,
+      "source_sha256": {
+        "run.json": "95225e3edc02d27fdb76ce1d3d59430cd4a977d9671281458c4e62043d2c880d",
+        "requests.jsonl": "99146216faad0113598d231c9177130df3972f274d73241c6cf23a9e428a0bdd",
+        "input_data.jsonl": "3ead4848c6e8d931bfe95f684ada82f58b65e0bd8a41c9d63199bd5f0c0ae0e0"
+      }
+    },
+    {
+      "model_id": "qwen9b",
+      "stage": "baseline",
+      "attempts": 123,
+      "source_sha256": {
+        "run.json": "b7a7c98b2a48da69d5ad38bb4f5eac41026523e05442dc75aefc611b73622076",
+        "requests.jsonl": "c568e86c8793b0be5821ef619dcc21207d647f0a946d85cc0b28f330352eb42b",
+        "input_data.jsonl": "a2e7dbff61687dea33ee4361874e259cc666de5048fad137ef63aa521af28021"
+      }
+    },
+    {
+      "model_id": "qwen9b",
+      "stage": "anchor",
+      "attempts": 360,
+      "source_sha256": {
+        "run.json": "55a081d512c1179690a1e883a6d5d5e58cfb7b37a725ccbbdeaf55142b9cde15",
+        "requests.jsonl": "2ec281a2d54b817fbe9bba75b9768cdfe0e07fa5a964ce8160abfb587b35b64a",
+        "input_data.jsonl": "3ead4848c6e8d931bfe95f684ada82f58b65e0bd8a41c9d63199bd5f0c0ae0e0"
+      }
+    },
+    {
+      "model_id": "claude-sonnet5",
+      "stage": "baseline",
+      "attempts": 123,
+      "source_sha256": {
+        "run.json": "0071d1b19f599cc7b4b04c0af8c0a1eb2e4ed741d19aa984437d79dbd96686f2",
+        "requests.jsonl": "c60424d681f6cbc9041435e0fbdd940cc9fe7877db1f696686304bd33dc1b70a",
+        "input_data.jsonl": "a2e7dbff61687dea33ee4361874e259cc666de5048fad137ef63aa521af28021"
+      }
+    },
+    {
+      "model_id": "claude-sonnet5",
+      "stage": "anchor",
+      "attempts": 360,
+      "source_sha256": {
+        "run.json": "79924d676cc51459af946c8a0fb61107ea04682f009c21e5e977a7296bf9203b",
+        "requests.jsonl": "20cfb19e16a04a1d8590726f7c187938a6b5adfee94baa32194f668f22475d28",
+        "input_data.jsonl": "3ead4848c6e8d931bfe95f684ada82f58b65e0bd8a41c9d63199bd5f0c0ae0e0"
+      }
+    },
+    {
+      "model_id": "terra",
+      "stage": "baseline",
+      "attempts": 123,
+      "source_sha256": {
+        "run.json": "3f58d9655f4040a390fd819c96642b2b0adef7e56f80a4e093b656f404838070",
+        "requests.jsonl": "70125b6478119de3ab15311ee4101fa714589f2510f81fec476a0a91c14c1f59",
+        "input_data.jsonl": "a2e7dbff61687dea33ee4361874e259cc666de5048fad137ef63aa521af28021"
+      }
+    },
+    {
+      "model_id": "terra",
+      "stage": "anchor",
+      "attempts": 360,
+      "source_sha256": {
+        "run.json": "49ff2ef997af03d6efee0bd8d76e0f05fe5a1b4b26b3f4bc7e2be1f0b5a7d61c",
+        "requests.jsonl": "781f3f789afdbafd6bb3404ee8d8b252e1dce34fa2a3cc81f8f38fb3001cc418",
+        "input_data.jsonl": "3ead4848c6e8d931bfe95f684ada82f58b65e0bd8a41c9d63199bd5f0c0ae0e0"
+      }
+    },
+    {
+      "model_id": "claude-haiku45",
+      "stage": "baseline",
+      "attempts": 123,
+      "source_sha256": {
+        "run.json": "dc7e0dd5ecfdf915834b4b9d36eea2882fb7571ce933007ada99ef5628955e9a",
+        "requests.jsonl": "bb3b5d77bd63615246162577e36e48b65d38c97e7281d169e329d31f0947de27",
+        "input_data.jsonl": "a2e7dbff61687dea33ee4361874e259cc666de5048fad137ef63aa521af28021"
+      }
+    },
+    {
+      "model_id": "claude-haiku45",
+      "stage": "anchor",
+      "attempts": 360,
+      "source_sha256": {
+        "run.json": "5e7aed3233a8e72a505956324b4ea8362205e54b3644d6784e35d609f1939e46",
+        "requests.jsonl": "1ed3abf13182baf06a8d500595149140af5161044254ba737790b562118b13c3",
+        "input_data.jsonl": "3ead4848c6e8d931bfe95f684ada82f58b65e0bd8a41c9d63199bd5f0c0ae0e0"
+      }
+    }
+  ]
+}
