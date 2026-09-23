@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Evaluating Jev and nine language models on ContractNLI: accuracy, inference cost, response time, and correctness across repeated request conditions.">
+  <meta name="theme-color" content="#2357d9">
+  <title>Jev — Cost–Accuracy Trade-offs in Contract Inference</title>
+  <link rel="icon" href="static/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="static/css/index.css">
+  <script defer src="static/js/data.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav-shell" aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="Jev project home"><span class="brand-symbol" aria-hidden="true">j.</span><span>Jev<span class="brand-sub"> / BENCHMARK</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span></button>
+    <div class="nav-links" id="main-nav"><a href="#question">The question</a><a href="#protocol">Protocol</a><a href="#results">Results</a><a href="#reproduce">Reproduce <span aria-hidden="true">↗</span></a></div>
+  </nav>
+</header>
+<main id="main">
+<section class="hero wrap" id="top" aria-labelledby="project-title">
+  <div class="eyebrow"><span class="status-dot"></span> COMPARATIVE EVALUATION · CONTRACT INFERENCE</div>
+  <p class="hero-kicker">Same score.<br><span>Different decisions.</span></p>
+  <h1 id="project-title">Cost–Accuracy Trade-offs in Contract Inference:<br class="desktop-break"> Evaluating <span class="blue">Jev</span> and Language Models</h1>
+  <p class="hero-description">What does it cost to get a contract judgment right—and keep it right? We evaluate accuracy, response time, and decision consistency across ten models and controlled changes to the request.</p>
+  <div class="resource-buttons"><a class="button primary" href="#results">Explore the results <span aria-hidden="true">↓</span></a><a class="button" href="https://github.com/ZF-Utokyo/Jev-Benchmark">Code &amp; records <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/ZF-Utokyo/Jev/blob/main/main.tex">Manuscript source <span aria-hidden="true">↗</span></a></div>
+  <p class="availability">Current research · Code and manuscript repositories currently require access.</p>
+  <div class="stats-strip" aria-label="Evaluation at a glance"><div><strong>10</strong><span>evaluated models</span></div><div><strong>123</strong><span>test contracts</span></div><div><strong>2,091</strong><span>baseline judgments / model</span></div><div><strong>12</strong><span>responses / fixed target</span></div></div>
+</section>
+<section class="section cream" id="question" aria-labelledby="question-title">
+ <div class="wrap question-grid">
+  <div><p class="eyebrow">01 / THE QUESTION</p><h2 id="question-title">An average can hide<br>the decisions that changed.</h2><p>A contract and its target hypothesis stay fixed. Yet showing other hypotheses, requesting more labels, or changing output order can change the answer.</p><p>Corrections and regressions can cancel in aggregate accuracy. And a model that always agrees with itself can still be consistently wrong.</p><a class="text-link" href="#protocol">Follow a fixed judgment <span aria-hidden="true">→</span></a></div>
+  <figure class="decision-demo">
+   <div class="demo-topline"><span>ILLUSTRATIVE EXAMPLE</span><span>4 fixed judgments</span></div>
+   <div class="demo-row"><div class="demo-row-label">Request A<small>First configuration</small></div><div class="decision-cells" aria-label="Judgments 1, 2, and 3 correct; judgment 4 wrong"><span class="correct">✓</span><span class="correct">✓</span><span class="correct">✓</span><span class="wrong">×</span></div><strong>75<small>%</small></strong></div>
+   <div class="change-indicators" aria-hidden="true"><span></span><span></span><span>↓</span><span>↑</span></div>
+   <div class="demo-row"><div class="demo-row-label">Request B<small>Changed configuration</small></div><div class="decision-cells" aria-label="Judgments 1, 2, and 4 correct; judgment 3 wrong"><span class="correct">✓</span><span class="correct">✓</span><span class="wrong">×</span><span class="correct">✓</span></div><strong>75<small>%</small></strong></div>
+   <div class="demo-bottom"><span>Same accuracy</span><span class="blue">Two decisions changed</span></div>
+   <figcaption>Conceptual illustration, not an observed model result. A regression and a correction leave accuracy unchanged.</figcaption>
+  </figure>
+ </div>
+</section>
+<section class="section wrap" id="protocol" aria-labelledby="protocol-title">
+ <div class="section-intro"><div><p class="eyebrow">02 / THE PROTOCOL</p><h2 id="protocol-title">One contract. One target.<br>Four ways to ask.</h2></div><p>We preserve the contract, target hypothesis, and gold label. Each condition is repeated three times, yielding twelve responses for each of 30 fixed targets.</p></div>
+ <div class="conditions">
+  <article class="condition"><div class="condition-heading"><span>A</span><small>ISOLATE THE TARGET</small></div><div class="catalog-mini one" aria-hidden="true"><i class="anchor"></i></div><h3>Target only</h3><p>Only the target hypothesis is visible. Request only its label.</p><div class="condition-output"><span>1 visible</span><span>1 output</span></div></article>
+  <article class="condition"><div class="condition-heading"><span>B</span><small>EXPAND THE CONTEXT</small></div><div class="catalog-mini" aria-hidden="true"><i class="anchor"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Full catalog, one answer</h3><p>All 17 hypotheses are visible. Request only the target label.</p><div class="condition-output"><span>17 visible</span><span>1 output</span></div></article>
+  <article class="condition"><div class="condition-heading"><span>C</span><small>EXPAND THE OUTPUT</small></div><div class="catalog-mini filled" aria-hidden="true"><i class="anchor"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>All answers, target first</h3><p>Keep the full catalog. Request all labels, with the target first.</p><div class="condition-output"><span>17 visible</span><span>17 outputs</span></div></article>
+  <article class="condition"><div class="condition-heading"><span>D</span><small>CHANGE OUTPUT ORDER</small></div><div class="catalog-mini filled" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="anchor"></i></div><h3>All answers, target last</h3><p>Keep the full catalog. Request all labels, with the target last.</p><div class="condition-output"><span>17 visible</span><span>17 outputs</span></div></article>
+ </div>
+ <div class="protocol-foot"><div><span class="tiny-label">THE STRICTER QUESTION</span><p>Is the target correct in <strong>all twelve responses?</strong></p></div><p>Agreement alone is insufficient. We separately count consistently correct targets, stable errors, changing valid labels, and targets with an invalid response.</p></div>
+ <p class="fine-print">Official ContractNLI test split; classification only. The baseline jointly requests all 17 labels once per contract. The 30-target panel is a subset of the baseline contracts. Extra outputs in C/D do not add primary targets. For Jev, C/D changes question-key order, which differs from autoregressive output positioning.</p>
+</section>
+<section class="section results-section" id="results" aria-labelledby="results-title">
+ <div class="wrap">
+  <div class="section-intro"><div><p class="eyebrow">03 / THE EVIDENCE</p><h2 id="results-title">A trade-off,<br>not a single winner.</h2></div><p>Jev has the lowest recorded cost and median response time in these configurations. Hosted language models achieve higher baseline accuracy. Persistent correctness tells a different story.</p></div>
+  <div class="results-card">
+   <div class="chart-header"><div><h3 id="chart-heading">Accuracy and the cost of a decision</h3><p id="chart-subtitle">123 contracts · 2,091 judgments per model</p></div><div class="segmented" role="group" aria-label="Horizontal axis"><button type="button" data-axis="cost" aria-pressed="true">Inference cost</button><button type="button" data-axis="time" aria-pressed="false">Response time</button></div></div>
+   <div class="chart-tools"><div class="legend"><span><i class="model-dot jev"></i>Jev</span><span><i class="model-dot hosted"></i>Hosted LMs</span><span><i class="model-dot local"></i>Local LMs</span></div><label>Show <select id="model-filter"><option value="all">All models</option><option value="hosted">Jev + hosted LMs</option><option value="local">Jev + local LMs</option></select></label></div>
+   <div class="chart-scroll" tabindex="0" role="region" aria-label="Interactive comparison chart; scroll horizontally on small screens"><svg id="tradeoff-chart" viewBox="0 0 1000 440" role="img" aria-labelledby="chart-title chart-desc"><title id="chart-title">Baseline accuracy versus inference cost</title><desc id="chart-desc">Explore the same values in the results table below. Select a model point for more detail.</desc></svg></div>
+   <div class="chart-detail" id="model-detail" aria-live="polite"><strong>Jev 1.13.0</strong><span>77.38% accuracy</span><span>$0.000228 / contract</span><span>1.24 s median</span><span>23 / 30 all twelve correct</span></div>
+   <p class="chart-caption">Each point is one evaluated configuration. Descriptive 95% whole-contract bootstrap intervals are available in the full metrics. The horizontal axis uses a logarithmic scale. Select a point or use Tab and Enter to inspect it. Scroll the chart horizontally on small screens.</p>
+  </div>
+  <div class="findings-row"><article><span class="finding-number">01</span><h3>Higher accuracy has a price.</h3><p>Flash-Lite gains 5.16 percentage points over Jev at about 6× its baseline cost. Gemini Pro has the highest observed accuracy, at 83.21%.</p></article><article><span class="finding-number">02</span><h3>The ranking can change.</h3><p>Sonnet has 24 of 30 targets correct in all twelve responses; Jev has 23. Small gaps on this panel do not establish a general stability advantage.</p></article><article><span class="finding-number">03</span><h3>Consistency can be wrong.</h3><p>Jev produces the same wrong label in all twelve responses for 5 of 30 targets. Stable errors are reported separately from persistent correctness.</p></article></div>
+  <div class="table-heading"><h3>The measured configurations</h3><a class="text-link" href="https://github.com/ZF-Utokyo/Jev-Benchmark/blob/main/data/expected_metrics.json">Full metrics <span aria-hidden="true">↗</span></a></div>
+  <div class="table-scroll" tabindex="0" role="region" aria-label="Model results, horizontally scrollable on small screens"><table><caption>Baseline accuracy, cost, and client elapsed time; all-twelve correctness on the separate 30-target panel.</caption><thead><tr><th scope="col">Model</th><th scope="col">Accuracy ↑</th><th scope="col">All 12 correct ↑</th><th scope="col">Cost / contract ↓</th><th scope="col">Median time ↓</th></tr></thead><tbody><tr data-model="jev"><th scope="row"><span class="model-dot jev"></span>Jev 1.13.0</th><td>77.38%</td><td>23<span class="muted"> / 30</span></td><td>$0.000228</td><td>1.24 s</td></tr><tr data-model="gemini-flash-lite"><th scope="row"><span class="model-dot hosted"></span>Gemini 3.5 Flash-Lite</th><td>82.54%</td><td>21<span class="muted"> / 30</span></td><td>$0.001353</td><td>1.60 s</td></tr><tr data-model="gemini-pro"><th scope="row"><span class="model-dot hosted"></span>Gemini 3.1 Pro Preview</th><td>83.21%</td><td>22<span class="muted"> / 30</span></td><td>$0.008474</td><td>3.73 s</td></tr><tr data-model="luna"><th scope="row"><span class="model-dot hosted"></span>GPT-5.6 Luna</th><td>78.96%</td><td>22<span class="muted"> / 30</span></td><td>$0.000931</td><td>1.74 s</td></tr><tr data-model="terra"><th scope="row"><span class="model-dot hosted"></span>GPT-5.6 Terra</th><td>82.59%</td><td>20<span class="muted"> / 30</span></td><td>$0.011839</td><td>11.61 s</td></tr><tr data-model="astra"><th scope="row"><span class="model-dot hosted"></span>GPT-6 Astra</th><td>81.83%</td><td>22<span class="muted"> / 30</span></td><td>$0.091890</td><td>20.94 s</td></tr><tr data-model="claude-haiku45"><th scope="row"><span class="model-dot hosted"></span>Claude Haiku 4.5</th><td>79.44%</td><td>19<span class="muted"> / 30</span></td><td>$0.005396</td><td>5.65 s</td></tr><tr data-model="claude-sonnet5"><th scope="row"><span class="model-dot hosted"></span>Claude Sonnet 5</th><td>82.40%</td><td>24<span class="muted"> / 30</span></td><td>$0.011352</td><td>3.27 s</td></tr><tr data-model="qwen4b"><th scope="row"><span class="model-dot local"></span>Qwen3.5-4B</th><td>74.22%</td><td>17<span class="muted"> / 30</span></td><td>$0.053653</td><td>86.87 s</td></tr><tr data-model="qwen9b"><th scope="row"><span class="model-dot local"></span>Qwen3.5-9B</th><td>79.15%</td><td>18<span class="muted"> / 30</span></td><td>$0.077361</td><td>134.64 s</td></tr></tbody></table></div>
+  <details class="interpretation" open><summary>How to read these results</summary><div class="caveat-grid"><p><strong>Cost is configuration-specific.</strong> API costs use reported charges or recorded token rates. Local estimates value observed GPU time at $2.00/GPU-hour, excluding loading, idle allocation, storage, transfer, and taxes.</p><p><strong>Time includes the deployment.</strong> Median client elapsed time includes preparation, network, service processing, and validation. It does not isolate model computation or time to first token.</p><p><strong>Settings are unequal.</strong> Reasoning effort, generation limits, interfaces, hardware, and providers differ. Sonnet, Haiku, and Terra were added after inspecting earlier results.</p><p><strong>The sample bounds the claim.</strong> The repeated panel has 30 independent contracts, not 360. Intervals use 5,000 whole-contract bootstrap draws and are descriptive, without multiple-comparison adjustment.</p></div><p class="audit-line"><strong>4,830 recorded attempts · 13 invalid responses.</strong> Failures count as incorrect and remain in cost and response-time summaries. No failed attempt was repaired, replaced, or retried.</p></details>
+ </div>
+</section>
+<section class="section wrap" id="reproduce" aria-labelledby="reproduce-title">
+ <div class="reproduce-grid"><div><p class="eyebrow">04 / REPRODUCE &amp; EXTEND</p><h2 id="reproduce-title">From claims<br>back to records.</h2><p>The benchmark release includes sanitized prediction records, frozen reference metrics, model configurations, and offline analysis code.</p><p>Recompute the recorded results after installing dependencies. New evaluation requests are a separate, explicit step and may incur charges.</p><a class="button primary" href="https://github.com/ZF-Utokyo/Jev-Benchmark">Open the benchmark <span aria-hidden="true">↗</span></a></div><div class="code-panel"><div class="code-header"><span>OFFLINE REPRODUCTION</span><button id="copy-command" type="button" aria-label="Copy reproduction commands">Copy commands</button></div><pre><code id="reproduce-command">git clone https://github.com/ZF-Utokyo/Jev-Benchmark.git
+cd Jev-Benchmark
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+python -m analysis.reproduce --check
+python -m analysis.figures
+python -m unittest discover -s tests</code></pre><p>Python 3.10+ · Analysis and plotting make no model calls.</p><span class="sr-only" id="copy-status" role="status"></span></div></div>
+ <div class="resource-grid"><a href="https://github.com/ZF-Utokyo/Jev-Benchmark/tree/main/data"><span class="resource-index">01 / DATA</span><strong>Released evidence <span aria-hidden="true">↗</span></strong><p>Sanitized prediction records and frozen reference metrics.</p></a><a href="https://github.com/ZF-Utokyo/Jev-Benchmark/blob/main/docs/protocol.md"><span class="resource-index">02 / METHODS</span><strong>Evaluation protocol <span aria-hidden="true">↗</span></strong><p>Definitions, operating points, uncertainty, and scope.</p></a><a href="https://github.com/ZF-Utokyo/Jev-Benchmark/blob/main/docs/rerunning.md"><span class="resource-index">03 / EXTEND</span><strong>Run a new evaluation <span aria-hidden="true">↗</span></strong><p>Prepare the data and explicitly configure a new model run.</p></a></div>
+</section>
+</main>
+<footer class="site-footer"><div class="wrap footer-inner"><div><a class="brand footer-brand" href="#top"><span class="brand-symbol" aria-hidden="true">j.</span><span>Jev</span></a><p>Cost, accuracy, and the decisions in between.</p></div><p>Research project · Current results<br>Dataset: <a href="https://stanfordnlp.github.io/contract-nli/">ContractNLI</a> · <a href="https://github.com/ZF-Utokyo/Jev-Benchmark">Benchmark repository</a></p><a href="#top" class="back-top" aria-label="Back to top">↑</a></div></footer>
+</body>
+</html>
