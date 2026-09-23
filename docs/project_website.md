@@ -19,17 +19,16 @@ GitHub rejects that configuration, the website source can remain ready on its
 branch without a live Pages deployment; repository visibility must not be
 changed merely to bypass the restriction.
 
-The website and benchmark code are publicly accessible. The separate manuscript
-repository has its own access settings. The manuscript link points to LaTeX source for
-*Cost–Accuracy Trade-offs in Contract Inference: Evaluating Jev and Language
-Models*; it is not a public PDF or publication record. Do not describe private
-links as public downloads.
+The website and benchmark code are publicly accessible. The public-facing name
+is **Same score. Different decisions.** Existing repository and Pages URLs are
+retained so links in the submitted paper continue to work. Manuscript source
+and LaTeX links are not displayed. Add a paper link when its arXiv URL is available.
 
 ## Updating the website
 
 1. Edit the static website in a separate checkout of `gh-pages` so the Python
    package and frozen records on `main` remain easy to review.
-2. Preserve the exact paper title and the formal-test scope: ten models,
+2. Preserve the project identity and the formal-test scope: ten models,
    123 baseline contracts, 30 test anchors, 4,830 attempts, and 13 invalid attempts.
 3. Verify every displayed value against `data/expected_metrics.json` on `main`.
    The README graphic is a static view of these same metrics; update it if the

@@ -9,8 +9,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7734,
-      "sha256": "4fde5a67fae54f6d878436d6fcfa3696af9029f166ad2406ea6d58d2db56e045"
+      "bytes": 614,
+      "sha256": "b6941cbdf02a8922e12a58bfc853b1be2c8f2182148e28d7290c275961770f64"
     },
     {
       "path": "analysis/__init__.py",
@@ -28,9 +28,14 @@
       "sha256": "bbb854cb928e5cb7da1b1c8d3c339473c6224589dba7527026932b3ffaa54c94"
     },
     {
-      "path": "assets/readme-overview.svg",
-      "bytes": 10351,
-      "sha256": "98fb137d772e25f0052412ee2da719387034b73c3ae77ebe66a4ae3b52358bde"
+      "path": "assets/LICENSE.lobe-icons",
+      "bytes": 1064,
+      "sha256": "add9d7531d1b21646317a8958e38fc727506fa39d24bdecb44154d943c82753a"
+    },
+    {
+      "path": "assets/cost-accuracy.png",
+      "bytes": 132962,
+      "sha256": "3acfccd3ab083ef516328aaa3e359ecc3430bfa1ae10826012fe50a1ec97e8fd"
     },
     {
       "path": "benchmark/__init__.py",
@@ -99,8 +104,8 @@
     },
     {
       "path": "docs/project_website.md",
-      "bytes": 3063,
-      "sha256": "aa82527601407a11367696d0f832be647ca983817ffce1e4056699faba5a572f"
+      "bytes": 3030,
+      "sha256": "06aea105bc7134f0d04957ea9e767909c9b525993865f14f1324d7729cfabf01"
     },
     {
       "path": "docs/protocol.md",
@@ -111,6 +116,11 @@
       "path": "docs/release_scope.md",
       "bytes": 3364,
       "sha256": "76245a5a1d997675375101797c3575833dfb71f664785e58146676aec57616e8"
+    },
+    {
+      "path": "docs/reproduction.md",
+      "bytes": 4677,
+      "sha256": "85ce1c622828b814a4fa0a7b2e98ea588cb44844701def3ad35f75d2a1193084"
     },
     {
       "path": "docs/rerunning.md",
