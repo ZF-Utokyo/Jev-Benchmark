@@ -6,11 +6,10 @@ The benchmark repository and its website serve different purposes:
 - **`gh-pages`** contains the static project website and its presentation assets.
   It does not replace the benchmark package or create new evaluation results.
 
-The intended site address is
+The project site is published at
 [https://zf-utokyo.github.io/Jev-Benchmark/](https://zf-utokyo.github.io/Jev-Benchmark/).
-This address becomes live only after GitHub Pages has been enabled and a
-deployment has succeeded. Until publication is verified, the README links to
-the website source branch.
+GitHub Pages uses the root directory of `gh-pages`, with HTTPS enabled.
+The benchmark repository is public, and the README links to this site.
 
 ## Publication and access
 
@@ -20,9 +19,8 @@ GitHub rejects that configuration, the website source can remain ready on its
 branch without a live Pages deployment; repository visibility must not be
 changed merely to bypass the restriction.
 
-A published project website may be publicly accessible while its linked code
-and manuscript repositories remain private. Repository links then require
-appropriate GitHub access. The manuscript link points to LaTeX source for
+The website and benchmark code are publicly accessible. The separate manuscript
+repository has its own access settings. The manuscript link points to LaTeX source for
 *Cost–Accuracy Trade-offs in Contract Inference: Evaluating Jev and Language
 Models*; it is not a public PDF or publication record. Do not describe private
 links as public downloads.

@@ -6,7 +6,7 @@
 
 **10 models · 123 test contracts · 30 fixed anchors · 4,830 recorded attempts**
 
-[**Project website source**](https://github.com/ZF-Utokyo/Jev-Benchmark/tree/gh-pages) &nbsp; · &nbsp;
+[**Project website**](https://zf-utokyo.github.io/Jev-Benchmark/) &nbsp; · &nbsp;
 [**Results**](#results-at-a-glance) &nbsp; · &nbsp;
 [**Protocol**](docs/protocol.md) &nbsp; · &nbsp;
 [**Reproduce**](#reproduce-the-recorded-results) &nbsp; · &nbsp;
@@ -22,8 +22,8 @@ offline recomputation of the core formal-test accuracy, correctness, cost, and
 response-time results.
 
 The accompanying manuscript is *Cost–Accuracy Trade-offs in Contract Inference:
-Evaluating Jev and Language Models*. Its source link requires access to the
-separate manuscript repository; it is not a published-paper link.
+Evaluating Jev and Language Models*. Its source is maintained in a
+separate manuscript repository; this is not a published-paper link.
 
 ## Results at a glance
 
