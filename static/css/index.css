@@ -11,3 +11,9 @@ thead th{background:#E0E0F4;color:#45455c}
 tbody tr:first-child{background:#D6EFF6}
 td.best-score{background:#B0B0E3;font-weight:750;color:#22243b}
 td.second-score{background:#C9DAF3;text-decoration:underline;text-underline-offset:3px;color:#22243b}
+
+/* A research identity independent of any evaluated model. */
+.brand-mark{width:38px;height:38px;flex-shrink:0}
+.brand-name{font-size:15px;line-height:1.25;letter-spacing:-.025em;font-weight:720}
+.brand-name>span{color:var(--blue)}
+@media(max-width:600px){.brand-name{font-size:13px}.brand-mark{width:34px;height:34px}.brand{gap:9px}}

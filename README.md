@@ -1,4 +1,4 @@
-# Jev benchmark project website
+# Same score. Different decisions.
 
 A static project page for the current contract-inference evaluation. The page uses aggregate metrics from the frozen benchmark release and makes no model calls.
 
@@ -16,7 +16,7 @@ The page is designed for branch-based GitHub Pages at the branch root; `.nojekyl
 - `static/css/index.css`: responsive design
 - `static/js/data.js`: sanitized aggregate model metrics
 - `static/js/index.js`: plot controls, point details, navigation, and copy button
-- `static/images/favicon.svg`: original minimal site mark
+- `static/images/favicon.svg`: original equal-count / changed-decision site mark
 
 Adapted from the user-supplied Academic Project Website Template. Its static directory layout, project-page sections, responsive navigation, and copy-button pattern were retained; placeholder content and CDN dependencies were replaced. The supplied template did not include an upstream credit URL.
 

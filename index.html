@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Evaluating Jev and nine language models on ContractNLI: accuracy, inference cost, response time, and correctness across repeated request conditions.">
+  <meta name="description" content="Same score. Different decisions. A ten-model evaluation of accuracy, cost, response time, and consistent correctness in contract inference.">
   <meta name="theme-color" content="#2357d9">
-  <title>Jev — Cost–Accuracy Trade-offs in Contract Inference</title>
+  <title>Same score. Different decisions. | Contract Inference Evaluation</title>
   <link rel="canonical" href="https://zf-utokyo.github.io/Jev-Benchmark/">
   <link rel="icon" href="static/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="static/css/index.css">
@@ -16,7 +16,7 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <nav class="nav-shell" aria-label="Main navigation">
-    <a class="brand" href="#top" aria-label="Jev project home"><span class="brand-symbol" aria-hidden="true">j.</span><span>Jev<span class="brand-sub"> / BENCHMARK</span></span></a>
+    <a class="brand" href="#top" aria-label="Same score. Different decisions. — project home"><img class="brand-mark" src="static/images/favicon.svg" width="38" height="38" alt=""><span class="brand-name">Same score.<br><span>Different decisions.</span></span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span></button>
     <div class="nav-links" id="main-nav"><a href="#question">The question</a><a href="#protocol">Protocol</a><a href="#results">Results</a><a href="#reproduce">Reproduce <span aria-hidden="true">↗</span></a></div>
   </nav>
@@ -25,9 +25,9 @@
 <section class="hero wrap" id="top" aria-labelledby="project-title">
   <div class="eyebrow"><span class="status-dot"></span> COMPARATIVE EVALUATION · CONTRACT INFERENCE</div>
   <p class="hero-kicker">Same score.<br><span>Different decisions.</span></p>
-  <h1 id="project-title">Cost–Accuracy Trade-offs in Contract Inference:<br class="desktop-break"> Evaluating <span class="blue">Jev</span> and Language Models</h1>
+  <h1 id="project-title">Cost, accuracy, and consistent correctness<br class="desktop-break"> in contract inference</h1>
   <p class="hero-description">What does it cost to get a contract judgment right—and keep it right? We evaluate accuracy, response time, and decision consistency across ten models and controlled changes to the request.</p>
-  <div class="resource-buttons"><a class="button primary" href="#results">Explore the results <span aria-hidden="true">↓</span></a><a class="button" href="https://github.com/ZF-Utokyo/Jev-Benchmark">Code &amp; records <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/ZF-Utokyo/Jev/blob/main/main.tex">Manuscript source <span aria-hidden="true">↗</span></a></div>
+  <div class="resource-buttons"><a class="button primary" href="#results">Explore the results <span aria-hidden="true">↓</span></a><a class="button" href="https://github.com/ZF-Utokyo/Jev-Benchmark">Code &amp; records <span aria-hidden="true">↗</span></a></div>
   <p class="availability">Current research · Benchmark code and records are publicly available.</p>
   <div class="stats-strip" aria-label="Evaluation at a glance"><div><strong>10</strong><span>evaluated models</span></div><div><strong>123</strong><span>test contracts</span></div><div><strong>2,091</strong><span>baseline judgments / model</span></div><div><strong>12</strong><span>responses / fixed target</span></div></div>
 </section>
@@ -83,6 +83,6 @@ python -m unittest discover -s tests</code></pre><p>Python 3.10+ · Analysis and
  <div class="resource-grid"><a href="https://github.com/ZF-Utokyo/Jev-Benchmark/tree/main/data"><span class="resource-index">01 / DATA</span><strong>Released evidence <span aria-hidden="true">↗</span></strong><p>Sanitized prediction records and frozen reference metrics.</p></a><a href="https://github.com/ZF-Utokyo/Jev-Benchmark/blob/main/docs/protocol.md"><span class="resource-index">02 / METHODS</span><strong>Evaluation protocol <span aria-hidden="true">↗</span></strong><p>Definitions, operating points, uncertainty, and scope.</p></a><a href="https://github.com/ZF-Utokyo/Jev-Benchmark/blob/main/docs/rerunning.md"><span class="resource-index">03 / EXTEND</span><strong>Run a new evaluation <span aria-hidden="true">↗</span></strong><p>Prepare the data and explicitly configure a new model run.</p></a></div>
 </section>
 </main>
-<footer class="site-footer"><div class="wrap footer-inner"><div><a class="brand footer-brand" href="#top"><span class="brand-symbol" aria-hidden="true">j.</span><span>Jev</span></a><p>Cost, accuracy, and the decisions in between.</p></div><p>Research project · Current results<br>Dataset: <a href="https://stanfordnlp.github.io/contract-nli/">ContractNLI</a> · <a href="https://github.com/ZF-Utokyo/Jev-Benchmark">Benchmark repository</a></p><a href="#top" class="back-top" aria-label="Back to top">↑</a></div></footer>
+<footer class="site-footer"><div class="wrap footer-inner"><div><a class="brand footer-brand" href="#top" aria-label="Same score. Different decisions. — project home"><img class="brand-mark" src="static/images/favicon.svg" width="38" height="38" alt=""><span class="brand-name">Same score.<br><span>Different decisions.</span></span></a><p>Cost, accuracy, and the decisions in between.</p></div><p>Research project · Current results<br>Dataset: <a href="https://stanfordnlp.github.io/contract-nli/">ContractNLI</a> · <a href="https://github.com/ZF-Utokyo/Jev-Benchmark">Benchmark repository</a></p><a href="#top" class="back-top" aria-label="Back to top">↑</a></div></footer>
 </body>
 </html>
