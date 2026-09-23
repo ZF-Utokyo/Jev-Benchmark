@@ -9,8 +9,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4117,
-      "sha256": "ad69991e0f18ee290e93b3a9aeda87174bfb50464507dfce0ee50382495cecfe"
+      "bytes": 7518,
+      "sha256": "e4f3148aa6a622cf4e9a9d7dddb189d2e810cf1e1385f7dc2290177ab9ae17d5"
     },
     {
       "path": "analysis/__init__.py",
@@ -26,6 +26,11 @@
       "path": "analysis/reproduce.py",
       "bytes": 6115,
       "sha256": "bbb854cb928e5cb7da1b1c8d3c339473c6224589dba7527026932b3ffaa54c94"
+    },
+    {
+      "path": "assets/readme-overview.svg",
+      "bytes": 10351,
+      "sha256": "98fb137d772e25f0052412ee2da719387034b73c3ae77ebe66a4ae3b52358bde"
     },
     {
       "path": "benchmark/__init__.py",
@@ -91,6 +96,11 @@
       "path": "data/splits.json",
       "bytes": 2318,
       "sha256": "8485a9e42ef0bd4302db7043b7387863187d80322ca710b73379a463d727a224"
+    },
+    {
+      "path": "docs/project_website.md",
+      "bytes": 3151,
+      "sha256": "eb0e56d1b6e41eb3185b92e76180f474fba558d2ebdb4d49b389e2b77ce39e36"
     },
     {
       "path": "docs/protocol.md",
