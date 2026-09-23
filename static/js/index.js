@@ -96,6 +96,13 @@
       add('circle',{cx:px,cy:py,r:model.key==='jev'?6:5,fill:color,stroke:'#fff','stroke-width':1.5});
       const [dx,dy]=positions[axis][model.key];
       const label=add('text',{x:px+dx,y:py+dy,'text-anchor':dx<0?'end':'start',fill:color,'font-size':11,'font-weight':model.key==='jev'?700:500,'dominant-baseline':'middle'}); label.textContent=model.short;
+      const icon = document.querySelector(`tr[data-model="${model.key}"] .model-icon`);
+      if (icon) {
+        const size = 14, gap = 4;
+        const iconX = dx < 0 ? px + dx - label.getComputedTextLength() - size - gap : px + dx;
+        if (dx >= 0) label.setAttribute('x', px + dx + size + gap);
+        add('image', {class:'chart-model-icon',href:icon.getAttribute('src'),x:iconX,y:py+dy-size/2,width:size,height:size,preserveAspectRatio:'xMidYMid meet','aria-hidden':'true'});
+      }
       g.addEventListener('click',()=>detail(model));
       g.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();detail(model);}});
     });
