@@ -2,6 +2,10 @@
 
 # Jev Benchmark
 
+## [Visit the project website ↗](https://zf-utokyo.github.io/Jev-Benchmark/)
+
+**Explore the interactive results, evaluation overview, and model comparisons.**
+
 ### Cost, accuracy, and consistent correctness in contract inference
 
 **10 models · 123 test contracts · 30 fixed anchors · 4,830 recorded attempts**
@@ -14,7 +18,7 @@
 
 </div>
 
-![Cost–accuracy comparison for ten models, alongside Jev's 23 correct, five consistently wrong, and two changing anchors.](assets/readme-overview.svg)
+[![Cost–accuracy comparison for ten models, alongside Jev's 23 correct, five consistently wrong, and two changing anchors. Click to visit the project website.](assets/readme-overview.svg)](https://zf-utokyo.github.io/Jev-Benchmark/)
 
 Evaluation code and sanitized prediction records for **Jev and nine language
 models** on the classification component of ContractNLI. This release supports
