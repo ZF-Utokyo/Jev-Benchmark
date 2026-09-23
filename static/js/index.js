@@ -54,7 +54,12 @@
     const box = document.getElementById('model-detail');
     box.replaceChildren();
     [model.name, `${model.accuracy.toFixed(2)}% accuracy`, `$${model.cost.toFixed(6)} / contract`, `${model.time.toFixed(2)} s median`, `${model.all12} / 30 all twelve correct`].forEach((value, i) => {
-      const el = document.createElement(i ? 'span' : 'strong'); el.textContent = value; box.appendChild(el);
+      const el = document.createElement(i ? 'span' : 'strong'); el.textContent = value;
+      if (i === 0) {
+        const icon = document.querySelector(`tr[data-model="${model.key}"] .model-icon`);
+        if (icon) el.prepend(icon.cloneNode(true));
+      }
+      box.appendChild(el);
     });
     document.querySelectorAll('tbody tr').forEach(row => row.classList.toggle('highlighted', row.dataset.model === model.key));
     svg.querySelectorAll('[data-key] .selection-ring').forEach(el => el.setAttribute('opacity',el.parentNode.dataset.key === selected ? '.24' : '0'));
