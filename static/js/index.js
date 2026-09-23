@@ -41,7 +41,7 @@
   const colors = {jev: '#2357d9', hosted: '#45776e', local: '#a97929'};
   const positions = {
     cost: {jev:[12,1], 'gemini-flash-lite':[12,-13], luna:[12,19], 'gemini-pro':[-12,-18], astra:[-12,15], qwen4b:[-12,21], qwen9b:[-12,20], 'claude-sonnet5':[12,8], terra:[12,-15], 'claude-haiku45':[12,20]},
-    time: {jev:[12,19], 'gemini-flash-lite':[12,-10], luna:[12,18], 'gemini-pro':[12,-14], astra:[12,16], qwen4b:[-12,20], qwen9b:[-12,20], 'claude-sonnet5':[-12,17], terra:[12,-14], 'claude-haiku45':[12,20]}
+    time: {jev:[12,19], 'gemini-flash-lite':[12,-34], luna:[12,18], 'gemini-pro':[12,4], astra:[12,16], qwen4b:[-12,20], qwen9b:[-12,20], 'claude-sonnet5':[-12,17], terra:[12,-14], 'claude-haiku45':[12,20]}
   };
   function node(tag, attrs, text) {
     const el = document.createElementNS(ns, tag);
@@ -95,10 +95,10 @@
       add('circle',{class:'focus-ring',cx:px,cy:py,r:12,fill:'none',stroke:color,'stroke-width':2,opacity:'0'});
       add('circle',{cx:px,cy:py,r:model.key==='jev'?6:5,fill:color,stroke:'#fff','stroke-width':1.5});
       const [dx,dy]=positions[axis][model.key];
-      const label=add('text',{x:px+dx,y:py+dy,'text-anchor':dx<0?'end':'start',fill:color,'font-size':11,'font-weight':model.key==='jev'?700:500,'dominant-baseline':'middle'}); label.textContent=model.short;
+      const label=add('text',{x:px+dx,y:py+dy,'text-anchor':dx<0?'end':'start',fill:color,'font-size':11,'font-weight':model.key==='jev'?700:500,'dominant-baseline':'middle'}); label.textContent=model.name;
       const icon = document.querySelector(`tr[data-model="${model.key}"] .model-icon`);
       if (icon) {
-        const size = 14, gap = 4;
+        const size = 16, gap = 5;
         const iconX = dx < 0 ? px + dx - label.getComputedTextLength() - size - gap : px + dx;
         if (dx >= 0) label.setAttribute('x', px + dx + size + gap);
         add('image', {class:'chart-model-icon',href:icon.getAttribute('src'),x:iconX,y:py+dy-size/2,width:size,height:size,preserveAspectRatio:'xMidYMid meet','aria-hidden':'true'});
