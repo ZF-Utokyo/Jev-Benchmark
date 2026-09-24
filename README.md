@@ -4,6 +4,8 @@ A static project page for the current contract-inference evaluation. The page us
 
 Live site: https://zf-utokyo.github.io/Jev-Benchmark/
 
+Paper: [Same Scores, Different Decisions: Evaluating JEV and Language Models for Legal Document Understanding](https://arxiv.org/abs/2609.27678).
+
 ## Preview
 
 Run `python3 -m http.server 8000` from this directory and open `http://127.0.0.1:8000/`. No build step, external fonts, analytics, or CDN dependencies are required.
